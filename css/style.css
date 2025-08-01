@@ -480,17 +480,7 @@
     }
 }
 
-@media(max-width: 480px) {
-    .itm_pf .tit h2 {
-        font-size: 32px;
-        line-height: 32px;
-    }
-
-    .itm_pf .tit .desc>li {
-        font-size: 14px;
-        line-height: 14px;
-    }
-}
+@media(max-width: 480px) {}
 
 /* 프로젝트섹션 끝 */
 
@@ -528,13 +518,21 @@
     transition: var(--transition-1s);
 }
 
+#work_list .work_list>ul>li:first-child>a {
+    padding: 0 0 16px 0;
+}
+
+#work_list .work_list>ul>li:last-child>a {
+    padding: 16px 0 0 0;
+}
+
 #work_list.on .work_list>ul>li>a {
     transform: translate(0, 0);
     transition: var(--transition-1s);
 }
 
-#work_list .work_list>ul>li:last-child>a {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+#work_list .work_list>ul>li:first-child>a {
+    border-top: none;
 }
 
 #work_list .work_list>ul>li>a .num {
@@ -595,23 +593,7 @@
     font-weight: 100;
 }
 
-@media (max-width: 768px) {
-    #work_list .work_list>ul>li>a .num {
-        width: 56px;
-        height: 56px;
-        font-size: 16px;
-    }
-
-    #work_list .work_list>ul>li>a .txt_box .subject {
-        font-size: 20px;
-        line-height: 20px;
-    }
-
-    #work_list .work_list>ul>li>a .txt_box .desc>li {
-        font-size: 14px;
-        line-height: 14px;
-    }
-}
+@media (max-width: 768px) {}
 
 @media (max-width: 480px) {
     #work_list .list_wrap {
@@ -622,25 +604,35 @@
         width: auto;
         height: auto;
         color: #999;
+        font-size: 24px;
         background: transparent;
     }
 
     #work_list .work_list>ul>li>a {
-        gap: 16px;
         align-items: baseline;
+        gap: 16px;
+        padding: 24px 0;
+    }
+
+    #work_list .work_list>ul>li:first-child>a {
+        padding: 0 0 24px 0;
+    }
+
+    #work_list .work_list>ul>li:last-child>a {
+        padding: 24px 0 0 0;
     }
 
     #work_list .work_list>ul>li>a .txt_box {
         gap: 8px;
     }
 
-    #work_list .work_list>ul>li>a .txt_box .subject {
-        font-size: 16px;
-        line-height: 16px;
-    }
-
     #work_list .work_list>ul>li>a .txt_box .desc {
         gap: 16px;
+    }
+
+    #work_list .work_list>ul>li>a .txt_box .desc>li {
+        font-size: 14px;
+        line-height: 14px;
     }
 
     #work_list .work_list>ul>li>a .txt_box .desc>li~li::before {
@@ -651,6 +643,8 @@
     #work_list .work_list>ul>li>a .more_btn {
         display: none;
     }
+
+
 }
 
 
@@ -662,7 +656,7 @@
 }
 
 #profile .tit h2 {
-    margin: 0;
+    margin: 0 auto;
 }
 
 #profile .inner {
@@ -839,7 +833,7 @@
 @media(max-width: 480px) {
     #profile .inner {
         gap: 24px;
-        align-items: baseline;
+        align-items: unset;
     }
 
     #profile .inner .itm_wrap {
