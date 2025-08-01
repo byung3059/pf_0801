@@ -601,7 +601,6 @@
     }
 
     #work_list .work_list>ul>li>a {
-        align-items: baseline;
         gap: 16px;
     }
 
@@ -623,12 +622,6 @@
         left: -8px;
         height: 10px;
     }
-
-    #work_list .work_list>ul>li>a .more_btn {
-        display: none;
-    }
-
-
 }
 
 
