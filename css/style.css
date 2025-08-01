@@ -596,34 +596,18 @@
 @media (max-width: 768px) {}
 
 @media (max-width: 480px) {
-    #work_list .list_wrap {
-        gap: 24px;
-    }
-
     #work_list .work_list>ul>li>a .num {
-        width: auto;
-        height: auto;
-        color: #999;
-        font-size: 24px;
-        background: transparent;
+        display: none;
     }
 
     #work_list .work_list>ul>li>a {
         align-items: baseline;
         gap: 16px;
-        padding: 24px 0;
     }
 
-    #work_list .work_list>ul>li:first-child>a {
-        padding: 0 0 24px 0;
-    }
-
-    #work_list .work_list>ul>li:last-child>a {
-        padding: 24px 0 0 0;
-    }
-
-    #work_list .work_list>ul>li>a .txt_box {
-        gap: 8px;
+    #work_list .work_list>ul>li>a .txt_box .subject {
+        font-size: 20px;
+        line-height: 20px;
     }
 
     #work_list .work_list>ul>li>a .txt_box .desc {
@@ -701,7 +685,7 @@
     font-size: 32px;
     line-height: 44px;
     white-space: nowrap;
-    font-family: 'Montserrat';
+    font-family: 'Unbounded';
     overflow: hidden;
 }
 
@@ -832,7 +816,6 @@
 
 @media(max-width: 480px) {
     #profile .inner {
-        gap: 24px;
         align-items: unset;
     }
 
@@ -841,9 +824,9 @@
     }
 
     #profile .inner .itm_wrap .itm strong {
-        margin: 0 0 8px 0;
         font-size: 24px;
         line-height: 32px;
+        margin: 0 0 8px 0;
     }
 
     #profile .inner .itm_wrap .itm>ul {
