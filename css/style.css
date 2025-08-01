@@ -47,7 +47,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    height: 100lvh;
+    height: 100svh;
 }
 
 .itm_intro .tit {
@@ -118,7 +118,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    height: 100lvh;
+    height: 100svh;
 }
 
 .itm_intro .cic_box {
@@ -126,7 +126,7 @@
     position: absolute;
     width: 100%;
     height: 100vh;
-    height: 100lvh;
+    height: 100svh;
 }
 
 .itm_intro .cic_box .cic {
@@ -328,7 +328,7 @@
 /* 프로젝트섹션 시작 */
 #project_sec {
     height: 400vh;
-    height: 400lvh;
+    height: 400svh;
     position: relative;
 }
 
@@ -336,7 +336,7 @@
     position: sticky;
     top: 0;
     height: 100vh;
-    height: 100lvh;
+    height: 100svh;
     overflow: hidden;
 }
 
@@ -372,7 +372,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100lvh;
+    height: 100svh;
     max-width: unset;
 }
 
@@ -914,7 +914,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100lvh;
+    height: 100svh;
     background: #fff;
     overflow: hidden;
 
