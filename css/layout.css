@@ -37,24 +37,13 @@ body {
     background: #f5f5f5;
 }
 
-.pin_sec .inner .tit p {
-    margin: 0 0 16px 0;
-    text-align: center;
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: 300;
-    font-family: 'Montserrat';
-    text-transform: uppercase;
-    overflow: hidden;
-    color: #222;
-}
-
 .pin_sec .inner .tit h2 {
     display: block;
     text-align: center;
-    font-weight: 700;
+    font-weight: 900;
     font-size: 56px;
     line-height: 64px;
+    font-family: 'Montserrat';
     overflow: hidden;
     color: #222;
 }
@@ -91,7 +80,6 @@ body {
 
 .aside_f.on {
     color: #444;
-    font-weight: 400;
 }
 
 .br_480 {
