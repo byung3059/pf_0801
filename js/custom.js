@@ -96,10 +96,9 @@ window.addEventListener("DOMContentLoaded", () => {
         ScrollTrigger.create({
             trigger: "#work_list",
             start: "top top",
-            end: "bottom top",
+            end: "center top",
             pin: true,
-            pinSpacing: false,
-
+            pinSpacing: true,
             onEnter: () => {
                 document.querySelector("#work_list").classList.add("on");
                 document.querySelector("#header .logo").classList.add("on");
@@ -117,7 +116,7 @@ window.addEventListener("DOMContentLoaded", () => {
         ScrollTrigger.create({
             trigger: "#profile",
             start: "top top",
-            end: "bottom top",
+            end: "center top",
             pin: true,
             pinSpacing: true,
             onEnter: () => document.querySelector("#profile").classList.add("on"),

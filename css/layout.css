@@ -43,7 +43,8 @@ body {
     font-weight: 900;
     font-size: 56px;
     line-height: 64px;
-    font-family: 'Montserrat';
+    font-family: 'Unbounded';
+    text-transform: uppercase;
     overflow: hidden;
     color: #222;
 }
@@ -106,9 +107,12 @@ body {
 }
 
 @media(max-width: 480px) {
+    .pin_sec .inner .tit h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
     .br_480 {
         display: block;
     }
-
-
 }

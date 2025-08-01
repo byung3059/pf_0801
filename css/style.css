@@ -37,7 +37,7 @@
 /* 인트로 시작 */
 
 .itm_intro {
-    background: #0A0A0A;
+    background: #050505;
     /* filter: invert(1); */
 }
 
@@ -66,7 +66,7 @@
     line-height: 72px;
     font-weight: 900;
     text-align: center;
-    font-family: 'Montserrat';
+    font-family: 'Unbounded';
     font-style: italic;
     white-space: nowrap;
     text-transform: uppercase;
@@ -74,26 +74,22 @@
 
 .itm_intro .tit h2 span {
     text-align: center;
-    animation: variable-loop 6.2s infinite both;
+    animation: variable-loop 5.5s infinite both;
     animation-delay: var(--delay);
     --delay: calc((var(--variable-index) + 1) * 0.15s);
 }
 
 @keyframes variable-loop {
     0% {
-        font-weight: 100;
+        font-weight: 200;
     }
 
     50% {
         font-weight: 900;
     }
 
-    90% {
-        font-weight: 100;
-    }
-
     100% {
-        font-weight: 100;
+        font-weight: 200;
     }
 }
 
@@ -299,8 +295,8 @@
 @media(max-width: 480px) {
 
     .itm_intro .tit h2 {
-        font-size: 40px;
-        line-height: 40px;
+        font-size: 36px;
+        line-height: 36px;
         letter-spacing: -5px;
         padding: 0 16px;
     }
@@ -315,10 +311,10 @@
     }
 }
 
-@media(max-width: 380px) {
+@media(max-width: 400px) {
     .itm_intro .tit h2 {
-        font-size: 36px;
-        line-height: 36px;
+        font-size: 32px;
+        line-height: 32px;
         letter-spacing: -5px;
     }
 }
@@ -421,19 +417,21 @@
     text-align: center;
     font-size: 20px;
     line-height: 20px;
-    font-weight: 100;
-    font-family: 'Montserrat';
+    font-weight: 200;
+    font-family: 'Unbounded';
     text-transform: uppercase;
     overflow: hidden;
 }
 
 .itm_pf .tit h2 {
-    padding: 0 0 24px 0;
+    margin: 0 0 32px 0;
     display: block;
     text-align: center;
     font-weight: 700;
     font-size: 56px;
     line-height: 56px;
+    font-family: 'Unbounded';
+    text-transform: uppercase;
     overflow: hidden;
 }
 
@@ -480,7 +478,12 @@
     }
 }
 
-@media(max-width: 480px) {}
+@media(max-width: 480px) {
+    .itm_pf .tit h2 {
+        font-size: 32px;
+        line-height: 32px;
+    }
+}
 
 /* 프로젝트섹션 끝 */
 
@@ -636,12 +639,7 @@
     margin: 0 auto;
 }
 
-#profile .inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+#profile .inner {}
 
 #profile .inner .itm_wrap {
     display: grid;
@@ -788,13 +786,14 @@
         border-bottom: 1px solid transparent;
     }
 
+    #profile .inner .itm_wrap .itm:first-child {
+        padding: 0 0 24px 0;
+    }
+
     #profile.on .inner .itm_wrap .itm {
         border-bottom: 1px solid #ddd;
     }
 
-    #profile .inner .itm_wrap .itm:first-child {
-        padding: 0 0 24px 0;
-    }
 
     #profile .inner .itm_wrap .itm strong {
         margin: 0 0 16px 0;
@@ -814,6 +813,15 @@
 
     #profile .inner .itm_wrap {
         width: 100%;
+    }
+
+    #profile .inner .itm_wrap .itm {
+        padding: 16px 0;
+        border-bottom: 1px solid transparent;
+    }
+
+    #profile .inner .itm_wrap .itm:first-child {
+        padding: 0 0 16px 0;
     }
 
     #profile .inner .itm_wrap .itm strong {
@@ -928,7 +936,7 @@
     text-align: center;
     text-transform: uppercase;
     font-style: italic;
-    font-family: 'Montserrat';
+    font-family: 'Unbounded';
     opacity: 0;
     white-space: nowrap;
     color: #222;
@@ -947,15 +955,15 @@
 
 @media(max-width: 480px) {
     #cover_ani .txt_box p span {
-        font-size: 40px;
-        line-height: 48px;
+        font-size: 36px;
+        line-height: 36px;
     }
 }
 
-@media(max-width: 380px) {
+@media(max-width: 400px) {
     #cover_ani .txt_box p span {
-        font-size: 36px;
-        line-height: 44px;
+        font-size: 32px;
+        line-height: 32px;
     }
 }
 
