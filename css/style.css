@@ -516,7 +516,7 @@
     align-items: center;
     gap: 24px;
     padding: 16px 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     transform: translate(0, 100%);
     transition: var(--transition-1s);
 }
@@ -547,7 +547,7 @@
     font-size: 20px;
     font-weight: 900;
     border-radius: 50%;
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 #work_list .work_list>ul>li>a .txt_box {
@@ -573,6 +573,7 @@
     font-size: 16px;
     line-height: 16px;
     font-weight: 300;
+    opacity: 0.8;
 }
 
 #work_list .work_list>ul>li>a .txt_box .desc>li~li::before {
@@ -583,7 +584,7 @@
     transform: translate(0, -50%);
     width: 1px;
     height: 14px;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 #work_list .work_list>ul>li>a .more_btn {
@@ -625,15 +626,17 @@
         left: -8px;
         height: 10px;
     }
+
+    #work_list .work_list>ul>li>a .more_btn>button {
+        display: none;
+    }
 }
 
 
 /* 워크리스트 끝 */
 
 /* 프로필 시작 */
-#profile {
-    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
-}
+#profile {}
 
 #profile .tit h2 {
     margin: 0 auto;
@@ -791,7 +794,7 @@
     }
 
     #profile.on .inner .itm_wrap .itm {
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
 
