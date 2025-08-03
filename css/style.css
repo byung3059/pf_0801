@@ -49,6 +49,7 @@
     backdrop-filter: blur(4px);
     border-radius: 4px;
     transition: var(--transition-1s);
+    white-space: nowrap;
 }
 
 
@@ -563,12 +564,15 @@
 @media (max-width: 768px) {}
 
 @media (max-width: 480px) {
-    #work_list .work_list>ul>li>a .num {
-        display: none;
-    }
+
 
     #work_list .work_list>ul>li>a {
         gap: 16px;
+    }
+
+    #work_list .work_list>ul>li>a .num {
+        width: 64px;
+        height: 64px;
     }
 
     #work_list .work_list>ul>li>a .txt_box .subject {
@@ -581,8 +585,8 @@
     }
 
     #work_list .work_list>ul>li>a .txt_box .desc>li {
-        font-size: 14px;
-        line-height: 14px;
+        font-size: 12px;
+        line-height: 12px;
     }
 
     #work_list .work_list>ul>li>a .txt_box .desc>li~li::before {
@@ -595,6 +599,17 @@
     }
 }
 
+@media(max-width: 380px) {
+    #work_list .work_list>ul>li>a .txt_box {
+        gap: 8px;
+    }
+
+    #work_list .work_list>ul>li>a .num {
+        width: 48px;
+        height: 48px;
+        font-size: 14px;
+    }
+}
 
 /* 워크리스트 끝 */
 
@@ -638,7 +653,7 @@
     margin: 0 0 24px 0;
     font-weight: 900;
     font-size: 32px;
-    line-height: 44px;
+    line-height: 32px;
     white-space: nowrap;
     font-family: 'Unbounded';
     overflow: hidden;
@@ -658,12 +673,10 @@
 #profile .inner .itm_wrap .itm ul>li {
     position: relative;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 20px;
     font-weight: 300;
     opacity: 0.8;
-    overflow: hidden;
 }
-
 
 #profile .inner .itm_wrap .itm>ul>ul {
     display: flex;
@@ -678,20 +691,19 @@
 #profile .inner .copy_wrap {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 8px;
 }
 
 #profile .inner .copy_wrap p {
     text-align: center;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 16px;
     font-weight: 300;
-    overflow: hidden;
 }
 
 #profile .inner .copy_wrap .copy {
     font-size: 14px;
-    line-height: 18px;
+    line-height: 14px;
     color: #ffffff;
     opacity: 0.6;
 }
@@ -705,15 +717,16 @@
 }
 
 @media(max-width: 1024px) {
-    #profile .inner {
-        gap: 40px;
+    #profile .inner .tit {
+        margin: 0 0 40px 0;
     }
 
     #profile .inner .itm_wrap {
-        margin: 0 auto;
+        margin: 0 auto 24px auto;
         width: max-content;
         grid-template-columns: repeat(1, 1fr);
         gap: 0;
+
     }
 
     #profile .inner .itm_wrap .itm {
@@ -728,7 +741,6 @@
     #profile.on .inner .itm_wrap .itm {
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
-
 
     #profile .inner .itm_wrap .itm strong {
         margin: 0 0 16px 0;
@@ -761,8 +773,8 @@
 
     #profile .inner .itm_wrap .itm strong {
         font-size: 24px;
-        line-height: 32px;
-        margin: 0 0 8px 0;
+        line-height: 24px;
+        margin: 0 0 16px 0;
     }
 
     #profile .inner .itm_wrap .itm>ul {
@@ -771,7 +783,7 @@
 
     #profile .inner .itm_wrap .itm ul>li {
         font-size: 14px;
-        line-height: 22px;
+        line-height: 18px;
     }
 
     #profile .inner .copy_wrap p {
