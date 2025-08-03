@@ -34,7 +34,7 @@ window.addEventListener("DOMContentLoaded", () => {
         // --- Lenis  스크롤 ---
         const lenis = new Lenis({
             smooth: true,
-            lerp: 0.05,
+            lerp: 0.03,
         });
 
         function raf(time) {
@@ -48,13 +48,6 @@ window.addEventListener("DOMContentLoaded", () => {
             ScrollTrigger.update();
         });
         ScrollTrigger.defaults({ scroller: window });
-
-        const T = document.querySelector('#to_top');
-        T.addEventListener('click', () => {
-            lenis.scrollTo(0, {
-                duration: 1.0, // 초 단위 (기본값은 1)
-            });
-        });
     });
     // 레니스 스크롤
 
@@ -69,6 +62,8 @@ window.addEventListener("DOMContentLoaded", () => {
             // 마지막 항목은 애니메이션 제외
             if (index === items.length - 1) return;
 
+            const nextItem = items[index + 1];
+
             const triggerStart = index * window.innerHeight;
             const triggerEnd = (index + 1) * window.innerHeight;
 
@@ -79,7 +74,15 @@ window.addEventListener("DOMContentLoaded", () => {
                     start: () => `${triggerStart} top`,
                     end: () => `${triggerEnd} top`,
                     scrub: true,
-                    invalidateOnRefresh: true
+                    invalidateOnRefresh: true,
+                    onUpdate: self => {
+                        // height 애니메이션이 끝나갈 때 (progress가 거의 1에 가까울 때)
+                        if (self.progress >= 0.60) {
+                            nextItem.classList.add('on');
+                        } else {
+                            nextItem.classList.remove('on');
+                        }
+                    }
                 }
             });
         });
@@ -90,47 +93,46 @@ window.addEventListener("DOMContentLoaded", () => {
             ScrollTrigger.refresh();
         });
     });
+
     // 프로젝트 섹션 gsap
 
+    // 네비게이션 //
     $(function () {
-        ScrollTrigger.create({
-            trigger: "#work_list",
-            start: "top top",
-            end: "center top",
-            pin: true,
-            pinSpacing: true,
-            onEnter: () => {
-                document.querySelector("#work_list").classList.add("on");
-                document.querySelector("#header .logo").classList.add("on");
-                document.querySelector("#to_top").classList.add("on");
-                document.querySelector("#scroll_down").classList.add("on");
-            },
-            onLeaveBack: () => {
-                document.querySelector("#work_list").classList.remove("on");
-                document.querySelector("#header .logo").classList.remove("on");
-                document.querySelector("#to_top").classList.remove("on");
-                document.querySelector("#scroll_down").classList.remove("on");
+        const itemHeight = window.innerHeight;
+        const baseOffset = document.querySelector('#project_sec').offsetTop;
+
+        const targets = ['intro', 'pf01', 'pf02', 'pf03', 'work_list', 'profile'];
+
+        targets.forEach((target, index) => {
+            const el = document.querySelector(`[data-target="${target}"]`);
+            if (el) {
+                el.addEventListener('click', e => {
+                    e.preventDefault();
+
+                    const scrollToY = baseOffset + index * itemHeight;
+
+                    gsap.to(window, {
+                        scrollTo: scrollToY,
+                        duration: 1,
+                        ease: "power2.inOut"
+                    });
+
+                    history.replaceState(null, '', ' ');
+                });
             }
         });
+    });
 
-        ScrollTrigger.create({
-            trigger: "#profile",
-            start: "top top",
-            end: "center top",
-            pin: true,
-            pinSpacing: true,
-            onEnter: () => document.querySelector("#profile").classList.add("on"),
-            onLeaveBack: () => document.querySelector("#profile").classList.remove("on"),
+    $(function () {
+
+        $('#header .m_menu_btn').on('click', function () {
+
+            $('#header #gnb').toggleClass('on');
+
         });
 
     });
 
-    // to_top
-    $(function () {
-
-
-
-    });
 
 
 });
