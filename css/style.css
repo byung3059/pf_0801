@@ -656,7 +656,6 @@
     line-height: 32px;
     white-space: nowrap;
     font-family: 'Unbounded';
-    overflow: hidden;
 }
 
 #profile .inner .itm_wrap .itm:first-child strong {
@@ -712,7 +711,7 @@
 @media(max-width: 1570px) {
     #profile .inner .itm_wrap .itm strong {
         font-size: 24px;
-        line-height: 32px;
+        line-height: 24px;
     }
 }
 
@@ -745,7 +744,7 @@
     #profile .inner .itm_wrap .itm strong {
         margin: 0 0 16px 0;
         font-size: 28px;
-        line-height: 38px;
+        line-height: 28px;
     }
 
     #profile.on .inner .itm_wrap .itm~.itm::before {
