@@ -45,7 +45,7 @@
     font-weight: 100;
     text-transform: uppercase;
     font-family: 'Unbounded';
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(4px);
     border-radius: 4px;
     transition: var(--transition-1s);
@@ -174,15 +174,18 @@
 }
 
 #project_sec .itm_intro .tit h2 {
-    letter-spacing: -9px;
+    text-align: center;
+
     font-size: 72px;
     line-height: 72px;
     font-weight: 900;
-    text-align: center;
-    font-family: 'Unbounded';
     font-style: italic;
-    white-space: nowrap;
+    font-family: 'Unbounded';
+
+    letter-spacing: -9px;
     text-transform: uppercase;
+
+    white-space: nowrap;
 }
 
 #project_sec .itm_intro .tit h2 span {
@@ -195,14 +198,17 @@
 @keyframes variable-loop {
     0% {
         font-weight: 200;
+
     }
 
     50% {
         font-weight: 900;
+
     }
 
     100% {
         font-weight: 200;
+
     }
 }
 
@@ -230,66 +236,6 @@
     height: 100svh;
 }
 
-#project_sec .itm_intro .cic_box {
-    z-index: 9;
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    height: 100svh;
-}
-
-#project_sec .itm_intro .cic_box .cic {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    animation: cic_left_right 6s linear infinite;
-}
-
-/* cic 공통 */
-#project_sec .itm_intro .cic_box_left {
-    top: 50%;
-    left: -50%;
-}
-
-#project_sec .itm_intro .cic_box_right {
-    bottom: 50%;
-    left: 50%;
-}
-
-#project_sec .itm_intro .cic_box .cic_01 {
-    width: 800px;
-    height: 800px;
-    animation-delay: 0.5s;
-}
-
-#project_sec .itm_intro .cic_box .cic_02 {
-    width: 1000px;
-    height: 1000px;
-    animation-delay: 1s;
-}
-
-#project_sec .itm_intro .cic_box .cic_03 {
-    width: 1200px;
-    height: 1200px;
-    animation-delay: 1.5s;
-}
-
-
-@keyframes cic_left_right {
-    0% {
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-    }
-
-    50% {
-        box-shadow: 0 0 24px 4px rgba(255, 255, 255, 0.05);
-    }
-
-    100% {
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-    }
-}
 
 .cic_center_box {
     position: relative;
@@ -298,7 +244,7 @@
     transform: translate(-50%, -50%);
     width: 800px;
     height: 800px;
-    animation: cic_center_box 6s linear infinite;
+    animation: cic_center_box 5s linear infinite;
 }
 
 @keyframes cic_center_box {
@@ -317,7 +263,7 @@
     width: 70%;
     height: 70%;
     border-radius: 100%;
-    animation: cic_center 10s linear infinite;
+    animation: cic_center 40s linear infinite;
 }
 
 @keyframes cic_center {
@@ -377,21 +323,6 @@
         top: calc(50% + 88px);
     }
 
-    #project_sec .itm_intro .cic_box .cic_01 {
-        width: 200px;
-        height: 200px;
-    }
-
-    #project_sec .itm_intro .cic_box .cic_02 {
-        width: 300px;
-        height: 300px;
-    }
-
-    #project_sec .itm_intro .cic_box .cic_03 {
-        width: 400px;
-        height: 400px;
-    }
-
     .cic_center_box {
         width: 100%;
         height: auto;
@@ -408,22 +339,6 @@
 
     #project_sec .itm_intro .tit p {
         top: calc(50% + 80px);
-    }
-
-
-    #project_sec .itm_intro .cic_box .cic_01 {
-        width: 180px;
-        height: 180px;
-    }
-
-    #project_sec .itm_intro .cic_box .cic_02 {
-        width: 240px;
-        height: 240px;
-    }
-
-    #project_sec .itm_intro .cic_box .cic_03 {
-        width: 320px;
-        height: 320px;
     }
 }
 
